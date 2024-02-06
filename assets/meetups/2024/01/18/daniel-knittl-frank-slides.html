@@ -1,0 +1,382 @@
+<hr />
+
+<p><code>
+            #########   #######    #######    #######
+            ##         ##     ##  ##      #  ##      #
+            ##         ##     ##  ##         ##
+            ######     ##     ##   ####       ####
+            ##         ##     ##       ###        ###
+            ##         ##     ##         ##         ##
+            ##         ##     ##  #      ##  #      ##
+            ##          #######    #######    #######
+</code>
+~                            Linux / FOSS Meetup Linz                   ~</p>
+
+<p>~                                      Jan 2024                         ~</p>
+
+<p>CC BY-SA 4.0                                          Daniel KNITTL-FRANK</p>
+
+<hr />
+
+<h1>Whois</h1>
+
+<ul>
+<li>GNU ♥ Linux</li>
+<li>Software Engineer at Dynatrace</li>
+<li>Member of <a href="https://hgbsec.at">HgbSec</a> CTF team</li>
+<li>I run <a href="https://fhLUG.at">fhLUG</a></li>
+</ul>
+
+<h1>Vim</h1>
+
+<p><code>
+          ###       ###    ####     #         #
+           ##       ##      ##      ##       ##
+           ##       ##      ##      ####   ####
+            ##     ##       ##      ## ## ## ##
+             ##   ##        ##      ##  ###  ##
+              ## ##         ##      ##   #   ##
+               ###          ##      ##       ##
+                #          ####    ####     ####
+</code></p>
+
+<ul>
+<li><a href="https://www.vim.org/">Vi Improved</a></li>
+<li>First release in 1991</li>
+<li>Authored by Bram Moolenaar († 2023)</li>
+<li>Open-source (of course!)</li>
+</ul>
+
+<p><a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">https://en.wikipedia.org/wiki/Vim_(text_editor)</a></p>
+
+<h1>First Things First</h1>
+
+<ul>
+<li><p>How to start vim? Type <code>vim</code></p></li>
+<li><p>How to exit Vim? Type <code>:wq&lt;Enter&gt;</code> to save and exit,
+<code>:q!</code> to exit without save</p>
+
+<p>(Pro-tip: <code>ZZ</code> and <code>ZQ</code> in normal mode)</p></li>
+</ul>
+
+<h1>Testimonials</h1>
+
+<blockquote>
+  <p>Vi is like a Ferrari, if you're a beginner, it handles like a <code>*****</code>, but once
+you get the hang of it, it's small, powerful and FAST!
+ --- (Unknown)</p>
+
+<p>VIM is like a new model Ferrari, and sounds like one too - "VIIIIIIMMM!"
+ --- (Stephen Riehm, Germany)</p>
+</blockquote>
+
+<p><a href="https://elias.rhi.hi.is/vim/quotes.html">https://elias.rhi.hi.is/vim/quotes.html</a></p>
+
+<h1>Mode Based Editing</h1>
+
+<ul>
+<li>Vim supports different modes (normal, <code>i</code>nsert, <code>v</code>isual, etc.)</li>
+<li><code>&lt;Esc&gt;</code> to exit any mode and return to normal mode</li>
+</ul>
+
+<h1>Getting Started</h1>
+
+<p>Vim comes with <code>vimtutor</code> binary which provides an "interactive" tutorial.</p>
+
+<p>You should try it :]</p>
+
+<h1>Basic Motions</h1>
+
+<p><code>
+          ^
+          k         Hint:  The h key is at the left and moves left.
+    &lt; h      l &gt;           The l key is at the right and moves right.
+         j                 The j key looks like a down arrow.
+         v
+</code></p>
+
+<p><em>But</em> you can almost always simply use the arrow keys to navigate</p>
+
+<p>Shameless plug: … or you can learn <a href="https://neo-layout.org/">Neo</a> to avoid moving your hand to the arrow keys</p>
+
+<h1>Basic Inserting</h1>
+
+<p>To enter insert mode:</p>
+
+<ul>
+<li><code>i</code>: <code>i</code>nsert</li>
+<li><code>a</code>: <code>a</code>ppend</li>
+<li><code>o</code>: starts a new line</li>
+</ul>
+
+<h1>When Something Goes Wrong</h1>
+
+<p>Don't panic and <code>&lt;ESC&gt;</code></p>
+
+<ul>
+<li><code>u</code>:     <code>u</code>ndo</li>
+<li><p><code>&lt;C-R&gt;</code>: <code>r</code>edo</p>
+
+<p>(<code>g-</code>/<code>g+</code> for walking through <em>undo-tree</em>)</p></li>
+</ul>
+
+<h1>Cool Selection Tricks</h1>
+
+<ul>
+<li><code>&lt;C-V&gt;</code>:   block/column selection</li>
+<li><code>V</code>:       line-based select</li>
+<li><code>o</code>:       jump to start/end of selection</li>
+<li><code>gv</code>:      re-select previous selection</li>
+</ul>
+
+<h1>Basic Editing</h1>
+
+<ul>
+<li><code>x</code>:  delete character (cross out)</li>
+<li><code>dd</code>: <code>d</code>elete line</li>
+<li><code>cc</code>: <code>c</code>hange line</li>
+<li><code>s</code>:  <code>s</code>ubstitute character under cursor</li>
+<li><code>J</code>:  <code>J</code>oin lines</li>
+</ul>
+
+<h1>Copy &amp; Paste</h1>
+
+<ul>
+<li><code>y</code>:        copy (<code>y</code>ank)</li>
+<li><code>d</code> or <code>x</code>:   cut (<code>d</code>elete)</li>
+<li><code>p</code>, <code>P</code>:     <code>p</code>aste after, <code>P</code>aste before</li>
+</ul>
+
+<h1>More Motions</h1>
+
+<ul>
+<li><code>w</code>:               <code>w</code>ord forward</li>
+<li><code>b</code>:               word <code>b</code>ackward</li>
+<li><code>e</code>:               <code>e</code>nd of word</li>
+<li><code>)</code>, <code>(</code>:            sentence forward, backward</li>
+<li><code>}</code>, <code>{</code>:            paragraph forward, backward</li>
+<li><code>%</code>:               matching item, e.g. <code>()</code> <code>[]</code> <code>{}</code></li>
+<li><code>^</code>:               start of text</li>
+<li><code>0</code>, <code>$</code>:            start and end of line</li>
+<li><code>1G</code> or <code>1gg</code>:       go to line <code>1</code></li>
+</ul>
+
+<h1>Combining Keys</h1>
+
+<p>Compose single keys to build powerful actions:</p>
+
+<ul>
+<li><p><code>2.</code>:   repeat last action <code>2</code> times</p></li>
+<li><p><code>yw</code>:   <code>y</code>ank to next <code>w</code>ord</p></li>
+<li><p><code>y3w</code>:  <code>y</code>ank next <code>3</code> <code>w</code>ords</p></li>
+<li><p><code>das</code>:  <code>d</code>elete <code>a</code> <code>s</code>entence</p></li>
+<li><p><code>ciw</code>:  <code>c</code>hange <code>i</code>nner <code>w</code>ord</p></li>
+<li><p><code>gUiw</code>: <code>U</code>pper-case <code>i</code>nner <code>w</code>ord</p></li>
+</ul>
+
+<h1>Text Object Selection</h1>
+
+<p><code>v</code> enters <code>v</code>isual mode (selecting text)</p>
+
+<ul>
+<li><code>viw</code>: <code>i</code>nner <code>w</code>ord</li>
+<li><code>vis</code>: <code>i</code>nner <code>s</code>entence</li>
+<li><code>vib</code>: <code>i</code>nner <code>b</code>lock, e.g. <code>()</code> <code>[]</code></li>
+<li><code>vi"</code>: <code>i</code>nside double quotes</li>
+<li><code>vap</code>: <code>a</code>round <code>p</code>aragraph</li>
+<li><code>va]</code>: <code>a</code>round brackets</li>
+<li><code>vat</code>: <code>a</code>round <code>t</code>ag</li>
+<li>... plus many more</li>
+</ul>
+
+<h1>Searching</h1>
+
+<ul>
+<li><code>/regex</code>, <code>?regex</code>: search regular expression forward, backward</li>
+<li><code>*</code>, <code>#</code>:   forward search for word under cursor, backward search</li>
+<li><p><code>n</code>, <code>N</code>:   next match, previous match</p></li>
+<li><p><code>fc</code>, <code>Fc</code>: next/previous character 'c' (inclusive)</p></li>
+<li><code>tc</code>, <code>Tc</code>: next/previous character 'c' (exclusive)</li>
+<li><p><code>;</code>, <code>,</code>:   repeat forward, repeat backward</p></li>
+<li><p><code>:%s/pattern/replace/g</code>: <code>s</code>ubstitute text file-wide</p></li>
+</ul>
+
+<h1>Text layout</h1>
+
+<ul>
+<li><code>=</code>:       auto-indent text/source code</li>
+<li><code>&gt;</code>, <code>&lt;</code>:    indent, unindent</li>
+<li><code>gq</code>:      format text</li>
+<li><code>:center</code>: center text</li>
+<li><code>:left</code>:   left align text</li>
+<li><code>:right</code>:  right aliign text</li>
+</ul>
+
+<h1>Autocompletion</h1>
+
+<ul>
+<li><code>&lt;C-N&gt;</code>:       autocomplete next</li>
+<li><code>&lt;C-P&gt;</code>:       autocomplete previous</li>
+<li><code>&lt;C-X&gt; &lt;C-L&gt;</code>: autocomplete line</li>
+<li><code>&lt;C-X&gt; &lt;C-F&gt;</code>: autocomplete file path</li>
+<li><code>&lt;C-X&gt; &lt;C-N&gt;</code>: autocomplete with context</li>
+<li><code>&lt;C-X&gt; &lt;C-O&gt;</code>: omni-completion</li>
+</ul>
+
+<h1>Registers</h1>
+
+<ul>
+<li>Yank and delete fill numbered registers 0 to 9</li>
+<li>26 named registers a to z</li>
+<li><p>Access registers with <code>"r</code></p></li>
+<li><p><code>"ry3w</code>: <code>y</code>ank next <code>3</code> <code>w</code>ords into register "<code>r</code>"</p></li>
+<li><code>"r2p</code>:  <code>p</code>aste <code>2</code> times from register "<code>r</code>"</li>
+</ul>
+
+<h1>Macros</h1>
+
+<p>Registers can be used to store and replay macros</p>
+
+<ul>
+<li><code>qr</code>:  start recording into register "r"; press <code>q</code> when finished</li>
+<li><code>@r</code>:  execute macro from register "r"</li>
+<li><code>@@</code>:  re-run last macro</li>
+<li><p><code>@:</code>:  re-run last "ex" command</p>
+
+<p>E.g. macro to capitalize first word in sentence,
+   then jump to next sentence:</p></li>
+</ul>
+
+<p><code>
+()guw~)
+</code></p>
+
+<p>Pro-tip: Macros are simply text in registers, you can yank, edit, and paste them:
+  <code>"rp</code> and <code>"ry</code></p>
+
+<h1>Quick Filter</h1>
+
+<p>Need to filter current line through external command?</p>
+
+<ul>
+<li><p><code>:.!cmd</code>: filter current line through command</p>
+
+<p>(Pro-tip: Type <code>!!</code>)
+(Pro-tip: <code>!!sh</code> to execute the current line as shell command)</p></li>
+</ul>
+
+<h1>Command Line Mode ("ex" mode)</h1>
+
+<p><code>:[range][command]</code></p>
+
+<p>Useful commands:</p>
+
+<ul>
+<li><code>:make</code>:                execute Makefile</li>
+<li><code>:!cmd</code>:                run external command</li>
+<li><code>:%!cmd</code>:               filter and replace content by command</li>
+<li><code>:1,10w file</code>:          <code>w</code>rite first 10 lines to file</li>
+<li><code>:r!date</code>:              <code>r</code>ead current date and time into file</li>
+<li><code>:g/pattern/command</code>:   perform <code>g</code>lobal command</li>
+<li><code>:v/pattern/command</code>:   perform in<code>v</code>erted global command
+<ul>
+<li>e.g. <code>:g/^$/d</code>:       delete empty lines</li>
+<li>e.g. <code>:g/^#/norm A #</code> add " #" after each Markdown header line</li>
+</ul></li>
+</ul>
+
+<h1>Useful Config Options</h1>
+
+<p>```
+set number               " show line numbers</p>
+
+<p>set ignorecase smartcase " ignore case if pattern lower case</p>
+
+<p>set incsearch            " incremental search
+set hlsearch             " highlight all matches</p>
+
+<p>" show non-printing characters (make sure your terminal supports UTF8!)
+set list listchars=tab:→ ,nbsp:␣,trail:•,space:⋅
+```</p>
+
+<p>Can be persisted in <code>~/.vimrc</code>. If you want to have a look at my settings,
+  check out <a href="https://github.com/knittl/.files/blob/master/.vimrc">https://github.com/knittl/.files/blob/master/.vimrc</a></p>
+
+<h1>Plugins</h1>
+
+<ul>
+<li>Possibility to write and load plugins written in <em>VimL</em></li>
+<li>Stored in <code>~/.vim/plugin/</code></li>
+</ul>
+
+<h2>Plugin Manager: Plug</h2>
+
+<ul>
+<li>Single-file plugin manager</li>
+<li><p><a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a></p>
+
+<p>Installing:</p></li>
+</ul>
+
+<p><code>
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://github.com/junegunn/vim-plug/raw/master/plug.vim
+</code></p>
+
+<p>Then add to your <code>~/.vimrc</code>:</p>
+
+<p><code>
+call plug#begin()
+  Plug 'git repository url'
+call plug#end()
+</code></p>
+
+<h1>Useful Plugins (Incomplete List)</h1>
+
+<ul>
+<li><code>mattn/emmet-vim</code>:         HTML and CSS editing on steroids</li>
+<li><code>tpope/vim-surround</code>:      Clever way of changing surrounding elements</li>
+<li><code>tpope/vim-fugitive</code>:      Never leave Vim to do Git stuff</li>
+<li><code>plasticboy/vim-markdown</code>: Better visual editing of markdown files</li>
+<li><code>junegunn/vim-easy-align</code>: Align text and tables</li>
+</ul>
+
+<h1>Using Vim in Other Applications</h1>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">vscodevim:</a>
+A Vim plugin for Visual Studio Code</li>
+<li><a href="https://github.com/JetBrains/ideavim">ideavim:</a>
+A Vim plugin for IntelliJ</li>
+<li><a href="http://vimperator.org/">vimperator:</a>
+A Vim plugin for Firefox (discontinued)</li>
+<li><a href="https://tridactyl.xyz/">tridactyl:</a>
+A Vim extension for Firefox</li>
+<li><a href="https://github.com/emacs-evil/evil">evil mode:</a>
+The extensible vi layer for Emacs</li>
+</ul>
+
+<h1>Sources and Further Reading</h1>
+
+<ul>
+<li><code>man vim</code></li>
+<li>Vim's <code>:help</code></li>
+<li><a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">https://en.wikipedia.org/wiki/Vim_(text_editor)</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim">https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim</a></li>
+<li><a href="https://vim-adventures.com/">https://vim-adventures.com/</a></li>
+<li><a href="https://vi.stackexchange.com">https://vi.stackexchange.com</a></li>
+<li><a href="https://fhLUG.at/2014/01/vim-workshop/">https://fhLUG.at/2014/01/vim-workshop/</a>
+<ul>
+<li><a href="https://fhlug.at/2019/12/vim-mas-special/">https://fhlug.at/2019/12/vim-mas-special/</a></li>
+<li><a href="https://fhlug.at/2022/05/vi-improved/">https://fhlug.at/2022/05/vi-improved/</a></li>
+</ul></li>
+<li><a href="https://vimawesome.com">https://vimawesome.com</a></li>
+<li><a href="https://github.com/akrawchyk/awesome-vim">https://github.com/akrawchyk/awesome-vim</a></li>
+</ul>
+
+<h1>Contact</h1>
+
+<ul>
+<li><a href="https://fhLUG.at">fhLUG.at</a></li>
+<li><a href="https://fhLUG.at/irc">libera#fhlug</a></li>
+</ul>

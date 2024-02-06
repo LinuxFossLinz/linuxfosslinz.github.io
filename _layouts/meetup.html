@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="post-content">
+    <div class="post-info">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date_to_string }}
+            {% if page.location %}
+                |
+                {% if page.location.href %}
+                    <a href="{{ page.location.href }}">{{ page.location.name }}</a>
+                {% else %}
+                    {{ page.location }}
+                {% endif %}
+            {% endif %}
+            {% if page.attendees %}
+                | {{ page.attendees }} attendees
+            {% endif %}
+            {% if page.link %}
+                |
+                {% assign href = page.link.url | default: page.link %}
+                {% assign name = page.link.name | default: page.link.url | default: page.link %}
+                <a href="{{ href }}">{{ name }}</a>
+            {% endif %}
+        </p>
+    </div>
+
+    <h2>Talks</h2>
+    {% for talk in page.talks %}
+    <div class="post-talk">
+        <h3>{{ talk.name }}</h3>
+        <p>{{ talk.speaker }}</p>
+        {% assign talk_slide_count = talk.slides | size %}
+        {% if talk.slides != null and talk_slide_count > 0 %}
+        <ul>
+            {% for slide in talk.slides %}
+                {% if slide.name or slide.filename or slide.url %}
+                    {% assign filename = slide.filename %}
+                    {% assign name = slide.name %}
+                {% else %}
+                    {% assign filename = slide %}
+                    {% assign name = slide %}
+                {% endif %}
+                {% assign page_date = page.date | date: "%Y/%m/%d" %}
+                {% assign filepath = "/assets/meetups/" | append: page_date | append: "/" | append: filename %}
+                {% assign url = slide.url | default: filepath %}
+                <li><a href="{{ url }}">{{ name | default: "slides" }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    <h2>Description</h2>
+    {{ content }}
+</div>

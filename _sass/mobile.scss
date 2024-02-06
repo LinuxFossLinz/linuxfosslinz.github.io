@@ -3,9 +3,16 @@
   // Hide clutter elements on mobile
   .mobile-hide{ display: none !important; }
 
-  // Don't split footer text
+  // Dont split footer text
   .footer-text{ float: left !important;}
 
   // Phone Friendly Margarine ;)
   html {margin: 1em !important;}
+
+  .flex-justify-between {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center !important;
+    gap: 0.5em;
+  }
 }

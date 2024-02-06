@@ -1,0 +1,36 @@
+---
+layout: default
+title: Meetups
+pagination:
+    enabled: true
+---
+
+We're planning on hosting meetups roughly every 3 months.
+However, in order to achieve this, <a href="/#call-for-speakers">we need speakers</a>!
+<br>
+If you don't want to miss out on new meetups, join our <a href="https://www.meetup.com/linux-foss-linz">Meetup.com group</a>.
+Also, keep an eye out for <a href="https://www.linkedin.com/in/jakob-hofer-simulatan/">posts to Jakob's LinkedIn</a>!
+
+<h2>Past Meetups</h2>
+{% for meetup in paginator.posts %}
+    <span class="post-item">
+        <span class="mobile-hide"> {{ meetup.date | date: '%Y-%m-%d' }} >> </span><a href="{{ meetup.url }}">{{ meetup.title }}</a>
+        <span class="float-right mobile-hide">
+            {% if meetup.attendees %}
+                {{ meetup.attendees }} Attendees |
+            {% endif %}
+            {{ meetup.categories }}
+        </span>
+    </span>
+{% endfor %}
+
+<div class="post-nav">
+{% if paginator.total_pages > 1 %}
+{% if paginator.next_page %}
+<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">&lt;- Older</a>
+{% endif %}
+{% if paginator.previous_page %}
+<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer -&gt;</a>
+{% endif %}
+{% endif %}
+</div>

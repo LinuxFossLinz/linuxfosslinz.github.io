@@ -1,11 +1,11 @@
 .post-info {
-  padding-bottom: 30px;
-  margin: 20px 0 5px;
-  padding-top: 20px;
+  padding-bottom: 1%;
+  margin: 0 0 5px;
+  margin-top: 0;
 }
 
 .post-content {
-  line-height: 35px;
+  line-height: 25px;
   padding-bottom: 50px;
 }
 
@@ -14,7 +14,32 @@
   padding-top: 10px;
 }
 
-.post-content h2 {
-  padding-bottom: 20px;
-  padding-top: 20px;
+/* div. required to properly override the main-content rule */
+div.post-content h2 {
+  padding-bottom: 10px;
+  padding-top: 25px;
+}
+
+.post-talk {
+  & h3 {
+    padding-top: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 25px;
+  }
+
+  & p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 0.8em;
+    line-height: 1.3em;
+  }
+
+  & ul {
+    margin-top: 0.2%;
+  }
+
+  & li {
+    line-height: 25px;
+  }
 }

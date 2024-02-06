@@ -1,6 +1,6 @@
-- name: Posts
-  link: /posts
-- name: Categories
-  link: /categories/
-- name: About & Contact
+- name: Home
   link: /
+- name: Meetups
+  link: /meetups
+- name: Meetup.com
+  link: https://www.meetup.com/linux-foss-linz/

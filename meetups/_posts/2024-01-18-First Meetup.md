@@ -2,7 +2,7 @@
 layout: meetup
 title: "Linux / FOSS Meetup #1"
 attendees: 33
-talks: [{name: "Introduction", speaker: "Jakob Hofer, Michael Stenz, Lorenz Holzbauer", slides: [{url: "https://linuxfosslinz.github.io/intro-presentation/"}]}, {name: "Dead simple Backups with Borgmatic", speaker: "Robert Führicht"}, {name: "Episode VIM - Return of the Editor", speaker: "Daniel Knittl-Frank", slides: [{name: "slides.md", filename: "daniel-knittl-frank-slides.md"}, {name: "slides.html", filename: "daniel-knittl-frank-slides.html"}]}]
+talks: [{name: "Introduction", speaker: "Jakob Hofer, Michael Stenz, Lorenz Holzbauer", slides: [{name: "Slides (Marp / HTML)", url: "https://linuxfosslinz.github.io/intro-presentation/"}]}, {name: "Dead simple Backups with Borgmatic", speaker: "Robert Führicht", slides: [{name: "Slides (PDF)", filename: "robert-fuehricht-slides.pdf"}, {name: "talk.tar.gz (lab & demos)", filename: "robert-fuehricht-talk.tar.gz"}]}, {name: "Episode VIM - Return of the Editor", speaker: "Daniel Knittl-Frank", slides: [{name: "Slides (Markdown)", filename: "daniel-knittl-frank-slides.md"}, {name: "Slides (HTML)", filename: "daniel-knittl-frank-slides.html"}]}]
 link: {name: "Meetup Event", url: "https://www.meetup.com/linux-foss-linz/events/298028235/"}
 location: {name: "Grand Garage", href: "https://grandgarage.eu/"}
 ---

@@ -28,4 +28,4 @@ We'd love to organise a meetup at your venue!
 
 <br>
 ## Contact
-Email us @ [LinuxFossLinz@proton.me](mailto:linuxfosslinz@proton.me).
+Email us @ [contact@linuxlinz.org](mailto:contact@linuxlinz.org).
